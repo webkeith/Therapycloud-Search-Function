@@ -112,7 +112,7 @@ function fetchTherapists() {
           fetchTherapists();
           return;
         } else if (!state.therapists.length) {
-          state.error = "Uh oh! No therapists found matching your search.";
+          state.error = "Bummer! We didn't find any therapists that match your search. But, more therapists are being added every day. So, check back soon.";
         } else {
           state.error = null;
         }
@@ -145,7 +145,7 @@ function fetchTherapists() {
     }
 
     if (state.error || !state.therapists.length) {
-      $error.html(`<div class="empty-therapist"><p class="text-size-large">Uh oh! ${state.error || "No therapists available yet in your area."}</p></div>`);
+      $error.html(`<div class="empty-therapist"><p class="text-size-large">Bummer! We didn't find any therapists that match your search. But, more therapists are being added every day. So, check back soon.</p></div>`);
       return;
     }
 
