@@ -1,47 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-<script>
-      var galleryThumbs  = new Swiper("#thumb-swiper", {
-        spaceBetween: 10,
-        watchSlidesProgress: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-      });
-      
-      var galleryTop  = new Swiper("#gallery-swiper", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: "#thumb-arrow-next-slide",
-          prevEl: "#thumb-arrow-prev-slide",
-        },
-        thumbs: {
-          swiper: galleryThumbs,
-        },
-      });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-<script>
-      var galleryThumbs  = new Swiper("#thumb-swiper", {
-        spaceBetween: 10,
-        watchSlidesProgress: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-      });
-      
-      var galleryTop  = new Swiper("#gallery-swiper", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: "#thumb-arrow-next-slide",
-          prevEl: "#thumb-arrow-prev-slide",
-        },
-        thumbs: {
-          swiper: galleryThumbs,
-        },
-      });
-</script>
-
 <script>
 $(document).ready(() => {
   $(".therapist-information, .therapist-error").hide();
@@ -308,11 +264,11 @@ if (Array.isArray(gallery) && gallery.length > 0) {
   gallery.forEach((url) => {
     const slideHTML = `
       <div class="swiper-slide gallery-item">
-        <img src="${url}" class="cover-image is-contain" />
+        <img src="${url}"/>
       </div>`;
     const thumbHTML = `
       <div class="swiper-slide thumbnail-item">
-        <img src="${url}" class="cover-image is-contain" />
+        <img src="${url}"/>
       </div>`;
 
     $('#main-gallery').append(slideHTML);
